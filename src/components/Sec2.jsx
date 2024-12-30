@@ -42,7 +42,7 @@ const Sec2 = () => {
                         </p>
                     </div>
                 </div>
-                <div className='col-lg-12 col-12'>
+                <div className='col-lg-12 mt-4 col-12'>
                     <div className='ques-card bulb-card' style={{'--bg': `#F6CA83`}}>
                         <Image src={bulb} alt='ques' />
                         <div className='content'>
