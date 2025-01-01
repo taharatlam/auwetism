@@ -13,7 +13,7 @@ import FaqSec from "@/components/FaqSec";
 export default function Home() {
   return (
     <>
-      <NavBar />
+      
       <Header />
       <Sec2 />
       <Sec3 />
@@ -22,7 +22,7 @@ export default function Home() {
       <PricingSec />
       <FaqSec />
       <CtaSec />
-      <Footer />
+   
     </>
   );
 }

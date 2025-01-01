@@ -72,6 +72,15 @@ h1,h2,h3,h4,h5,h6{
     padding-right: 10px;
     max-width: max-content;
 
+    &.know-more{
+        background: transparent !important;
+        padding: 0em 1.5em !important;
+
+        span{
+            color: $green;
+        }
+    }
+
     &.center{
         margin: 0 auto;
     }
@@ -367,13 +376,17 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 
+    .know-more{
+        margin-bottom: 2em !important;
+    }
+
     .points{
         position: relative;
         padding: 1em 1.5em;
         max-height: 300px;
         overflow-x: hidden;
         overflow-y: auto;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
 
         ul{
             padding-left: 20px !important;
@@ -393,6 +406,32 @@ h1,h2,h3,h4,h5,h6{
                     color: $green !important;
                     font-size: 22px;
                 }
+            }
+        }
+    }
+}
+
+.points{
+    position: relative;
+    padding: 1em 1.5em;
+
+    ul{
+        padding-left: 0px !important;
+
+        li{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 120%;
+            list-style: disc !important;
+            
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+
+            &::marker{
+                background: $green !important;
+                color: $green !important;
+                font-size: 22px;
             }
         }
     }
@@ -455,5 +494,15 @@ h1,h2,h3,h4,h5,h6{
         color: #565656;
         font-size: 14px;
         padding: 20px 20px !important;
+    }
+}
+.cc-modal{
+    
+    .modal-dialog{
+        max-width: 800px !important;
+    }
+    .modal-header{
+
+        color: $green;
     }
 }
