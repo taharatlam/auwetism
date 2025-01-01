@@ -136,6 +136,10 @@ h1,h2,h3,h4,h5,h6{
     font-size: 42px;
     font-weight: 700 !important;   
     color: $black;
+
+    span{
+        color: $green;
+    }
 }
 .ques-card{
     padding: 2.5em 2.5em;
@@ -261,5 +265,195 @@ h1,h2,h3,h4,h5,h6{
         color: white;
         font-size: 42px;
         margin-bottom: 20px;
+    }
+}
+.mo-checker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.5em 0px;
+
+    >span{
+        font-weight: 700;
+        font-size: 22px;
+        font-family: 'Georgia';
+    }
+}
+.cus-toggler{
+    position: relative;
+    --width: 35px;
+
+    input{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        &:checked ~ label{
+
+            span{
+                transform: translate( 100%);
+            }
+        }
+    }
+
+    label{
+        padding: 0.3em;
+        border-radius: 100px;
+        background: transparent;
+        width: calc( var(--width) * 2.3  ) !important;
+        cursor: pointer;
+        border: 1px solid black;
+
+        span{
+            width: var(--width);
+            height: var(--width);
+            background: $green;
+            border-radius: 50%;
+            display: block;
+            transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    }
+}
+.sub-card{
+    position: relative;
+    border-radius: 32px;
+    background: white;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 25px 0px rgba($color: #000000, $alpha: 0.1);
+
+    .strike-price{
+        background: transparent !important;
+        margin-bottom: 0;
+        padding: 0 !important;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 24px;
+        text-decoration: line-through !important;
+    }
+
+    h4{
+        padding: 0.5em 1.5em;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+        background: $green;
+    }
+
+    .sub-top{
+        text-align: center;
+        padding: 0px 2.5em;
+
+        h3{
+            font-weight: 700;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        p{
+            background: $green;
+            font-weight: 700;
+            color: white;
+            font-size: 24px;
+            font-family: 'Georgia', sans-serif;
+            padding: 0.4em 15px ;
+            border-radius: 20px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+    }
+
+    .points{
+        position: relative;
+        padding: 1em 1.5em;
+        max-height: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 20px;
+
+        ul{
+            padding-left: 20px !important;
+
+            li{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 120%;
+                list-style: disc !important;
+                
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                &::marker{
+                    background: $green !important;
+                    color: $green !important;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+.test-swiper{
+
+    .swiper-slide{
+        height: auto;
+    }
+}
+.testimonial-card{
+    position: relative;
+    padding: 1.5em 2.5em;
+    background: $green;
+    border-radius: 20px;
+    height: 100%;
+    padding-bottom: 2.3em;
+
+    h4{
+        text-align: center;
+        color: black;
+        font-size: 24px;
+    }
+    p{
+        text-align: center;
+        color: white;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+}
+.acc{
+    position: relative;
+
+    .accordion-item{
+        margin-bottom: 20px;
+        border-radius: 20px !important;
+        overflow: hidden;
+        background: #E1E7EE !important;
+        box-shadow: 0px 0px 10px 0px rgba($color: #000000, $alpha: 0.25);
+    }
+    .accordion-button{
+        padding: 24px 22px !important;
+        border: 1px solid transparent !important;
+        border-radius: 20px !important;
+        color: #1D1D1D !important;
+        font-weight: 500 !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 16px !important;
+
+        &:not(.collapsed){
+            border: 1px solid #A7CF39 !important;
+            box-shadow: 0px 0px 10px 0px rgba($color: #A7CF39, $alpha:0.25) !important;
+            background: white !important;
+        }
+    }
+    .accordion-body{
+        border-bottom-right-radius: 20px !important;
+        border-bottom-left-radius: 20px !important;
+        background: #E1E7EE !important;
+        color: #565656;
+        font-size: 14px;
+        padding: 20px 20px !important;
     }
 }

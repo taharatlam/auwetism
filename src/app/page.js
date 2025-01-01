@@ -7,6 +7,9 @@ import Sec3 from "@/components/Sec3";
 import Gain from "@/components/Gain";
 import Footer from "@/components/Footer";
 import CtaSec from "@/components/CtaSec";
+import PricingSec from "@/components/PricingSec";
+import Testimonials from "@/components/Testimonials";
+import FaqSec from "@/components/FaqSec";
 export default function Home() {
   return (
     <>
@@ -15,6 +18,9 @@ export default function Home() {
       <Sec2 />
       <Sec3 />
       <Gain />
+      <Testimonials />
+      <PricingSec />
+      <FaqSec />
       <CtaSec />
       <Footer />
     </>
