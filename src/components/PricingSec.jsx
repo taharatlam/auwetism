@@ -77,7 +77,7 @@ const PricingSec = () => {
                         <div className="sub-card">
                             <div className="sub-top">
                                 <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
-                                <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹9,000' : '$120') : (isIndia ? '₹1,08,000' : '$1,440')}</h4>
+                                {/* <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹9,000' : '$120') : (isIndia ? '₹1,08,000' : '$1,440')}</h4> */}
                                 <h3>{isMonthly ? (isIndia ? '₹4,000' : '₹8,000') : (isIndia ? '₹40,000' : '₹80,000')}</h3>
                             </div>
                             <h4>
@@ -112,7 +112,7 @@ const PricingSec = () => {
                         <div className="sub-card">
                             <div className="sub-top">
                                 <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
-                                <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹10,000' : '$130') : (isIndia ? '₹1,21,000' : '$1,600')}</h4>
+                                {/* <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹10,000' : '$130') : (isIndia ? '₹1,21,000' : '$1,600')}</h4> */}
                                 <h3>{isMonthly ? (isIndia ? '₹8,000' : '₹16,000') : (isIndia ? '₹80,000' : '₹1,60,000')}</h3>
                             </div>
                             <h4>
