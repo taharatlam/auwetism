@@ -19,7 +19,7 @@ const CtaSec = () => {
                                     <h3>
                                         Take the First Step Toward Confidence, Clarity, and Connection—For You and Your Child
                                     </h3>
-                                    <Link href='/' className='main-btn'>
+                                    <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn'>
                                         <span>Get Started</span>
                                         <Image src={arr} alt='phone' />
                                     </Link>

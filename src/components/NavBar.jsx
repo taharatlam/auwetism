@@ -13,8 +13,8 @@ const NavBar = () => {
                 <Link href='/' className='logo'>
                     <Image src={logo} alt='logo' />
                 </Link>
-                <Link href='/' className='main-btn'>
-                    <span>Contact Us</span>
+                <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn'>
+                    <span>Login</span>
                     <Image src={arr} alt='phone' />
                 </Link>
             </div>

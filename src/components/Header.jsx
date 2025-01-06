@@ -22,7 +22,7 @@ const Header = () => {
                         <p className='para'>
                             Whether your child has recently been diagnosed with Autism or you've been navigating therapy for years, it's natural to feel overwhelmed and uncertain about the next steps. At Awetism Insights, we’re here to support and empower you every step of the way, helping you find clarity and confidence on this journey. Our mission is to help your child to regulate, learn, interact, and communicate effectively with everyone and in all social situations. We support kids who have a diagnosis of Autism from <span>2-18 years.</span>
                         </p>
-                        <Link href='/about' className='main-btn'>
+                        <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn'>
                             <span>Let's work together to support your child</span>
                             <Image src={arr} alt='phone' />
                         </Link>

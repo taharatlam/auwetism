@@ -25,11 +25,11 @@ const Banner = () => {
                         <p className='para'>
                         Hi, I’m Reena Singh. Over the past 24 years, I’ve been working with children on the Autism spectrum and their families. When I started as an Occupational Therapist, I was just like many parents I meet today—searching for answers, trying to understand what truly works. Slowly, with years of learning, training, and working hands-on with children and families, I developed a holistic approach that helps children regulate, learn, and communicate while also empowering parents to feel calm and confident. Throughout my journey, I’ve been fortunate to witness incredible transformations. I’ve seen children who struggled to communicate find their voice. I’ve seen families overwhelmed by sensory meltdowns find calm and connection.
                         </p>
-                        <Link href='/' className='main-btn know-more pl-0 mb-4' style={{paddingLeft: '0px !important'}}>
+                        {/* <Link href='/' className='main-btn know-more pl-0 mb-4' style={{paddingLeft: '0px !important'}}>
                             <span>Read More</span>
                             <Image src={greenarr} alt='phone' />
-                        </Link>
-                        <Link href='/' className='main-btn'>
+                        </Link> */}
+                        <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn'>
                             <span>Join Awetism Insights Today</span>
                             <Image src={arr} alt='phone' />
                         </Link>

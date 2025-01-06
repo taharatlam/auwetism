@@ -70,7 +70,7 @@ const Sec3 = () => {
             </div>
             <div className="row">
                 <div className="col-12 mt-5">
-                    <Link href='/' className='main-btn center'>
+                    <Link href='/about' className='main-btn center'>
                         <span>Learn more about us</span>
                         <Image src={arr} alt='phone' />
                     </Link>

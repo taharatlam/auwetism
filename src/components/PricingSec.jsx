@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import arr from '@/images/arr.svg'
@@ -9,6 +9,8 @@ import PriceModal from './PriceModal'
 const PricingSec = () => {
     const [show, setShow] = useState(false);
     const [data, setData] = useState(null);
+    const [isMonthly, setIsMonthly] = useState(true);
+    const [isIndia, setIsIndia] = useState(true);
 
     const data1 = [
         "15 masterclasses which are charged separately (total 1,08,000) earlier but you get complete access to all now in the app.",
@@ -21,37 +23,47 @@ const PricingSec = () => {
         "Youtube live-question and answer session"
     ]
 
-  const handleClose = (id) => {
-    
-    setShow(false);
-  }
-  const handleShow = (id) => {
-    if(id == 'plan1'){
-        setData(data1)
-    }else{
-        setData(data1)
+    useEffect(() => {
+        const checkLocation = async () => {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const locationData = await response.json();
+                setIsIndia(locationData.country === 'IN');
+                console.log(locationData.country);
+            } catch (error) {
+                console.error('Error fetching location data:', error);
+            }
+        };
+        checkLocation();
+    }, []);
+
+    const handleClose = (id) => {
+        setShow(false);
     }
-    setShow(true);
-  }
 
+    const handleShow = (id) => {
+        if (id === 'plan1') {
+            setData(data1)
+        } else {
+            setData(data1)
+        }
+        setShow(true);
+    }
 
+    const togglePlan = () => {
+        setIsMonthly(!isMonthly);
+    }
 
-
-  return (
-    <section className="sec pt-0 pricing-sec">
+    return (
+        <section className="sec pt-0 pricing-sec">
             <PriceModal handleShow={handleShow} handleClose={handleClose} show={show} data={data} />
             <div className="container">
                 <div className="row">
-                    {/* <div className="col-12">
-                        <h3 className="sec-head text-center">
-                            Explore our <span>flexible subscription</span> plans below:
-                        </h3>
-                    </div> */}
                     <div className="col-12">
                         <div className="mo-checker">
                             <span>Monthly</span>
                             <div className="cus-toggler">
-                                <input type="checkbox" id="c" />
+                                <input type="checkbox" id="c" onChange={togglePlan} />
                                 <label htmlFor="c">
                                     <span></span>
                                 </label>
@@ -64,12 +76,12 @@ const PricingSec = () => {
                     <div className="col-lg-4 col-12">
                         <div className="sub-card">
                             <div className="sub-top">
-                                <p>Yearly</p>
-                                <h4 className='strike-price'>1,08,000</h4>
-                                <h3>40,000</h3>
+                                <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
+                                <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹9,000' : '$120') : (isIndia ? '₹1,08,000' : '$1,440')}</h4>
+                                <h3>{isMonthly ? (isIndia ? '₹4,000' : '₹8,000') : (isIndia ? '₹40,000' : '₹80,000')}</h3>
                             </div>
                             <h4>
-                            Evolving Plan
+                                Evolving Plan
                             </h4>
                             <div>
                                 <div className="points">
@@ -85,12 +97,12 @@ const PricingSec = () => {
                                         <li>Emotional wellness 2024</li>
                                     </ul>
                                 </div>
-                                <button onClick={()=>handleShow('plan1')} className='main-btn know-more'>
+                                <button onClick={() => handleShow('plan1')} className='main-btn know-more'>
                                     <span>Know more</span>
                                     <Image src={greenarr} alt='phone' />
                                 </button>
                             </div>
-                            <Link href='/' className='main-btn center'>
+                            <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn center'>
                                 <span>Get Started</span>
                                 <Image src={arr} alt='phone' />
                             </Link>
@@ -99,12 +111,12 @@ const PricingSec = () => {
                     <div className="col-lg-4 col-12">
                         <div className="sub-card">
                             <div className="sub-top">
-                                <p>Yearly</p>
-                                <h4 className='strike-price'>1,21,000</h4>
-                                <h3>80,000</h3>
+                                <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
+                                <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹10,000' : '$130') : (isIndia ? '₹1,21,000' : '$1,600')}</h4>
+                                <h3>{isMonthly ? (isIndia ? '₹8,000' : '₹16,000') : (isIndia ? '₹80,000' : '₹1,60,000')}</h3>
                             </div>
                             <h4>
-                            Empowered Plan
+                                Empowered Plan
                             </h4>
                             <div>
                                 <div className="points">
@@ -120,22 +132,21 @@ const PricingSec = () => {
                                         <li>Emotional wellness 2024</li>
                                     </ul>
                                 </div>
-                                <button onClick={()=>handleShow('plan2')}   className='main-btn know-more'>
+                                <button onClick={() => handleShow('plan2')} className='main-btn know-more'>
                                     <span>Know more</span>
                                     <Image src={greenarr} alt='phone' />
                                 </button>
                             </div>
-                            <Link href='/' className='main-btn center'>
+                            <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn center'>
                                 <span>Get Started</span>
                                 <Image src={arr} alt='phone' />
                             </Link>
                         </div>
                     </div>
-                  
                 </div>
             </div>
         </section>
-  )
+    )
 }
 
 export default PricingSec
