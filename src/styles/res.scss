@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    .banner-content h1{
+        font-size: 24px;
+    }
+    .inner-nav .logo{
+        width: 120px;
+        height: auto;
+
+        img{
+            height: auto;
+        }
+    }
+    .banner-content{
+        padding-top: 2em;
+    }
+    .sec-head{
+        font-size: 32px;
+    }
+    .cta-wrapper{
+        padding: 1.2em 1.2em;
+
+        .main-btn{
+            margin-bottom: 2em;
+        }
+    }
+    .sec{
+        padding: 3em 0px;
+    }
+    .sub-card{
+        margin-bottom: 2em;
+    }
+    .main-btn{
+
+        span{
+            font-size: 14px;
+        }
+    }
+    .in-card{
+        margin-bottom: 15px;
+    }
+    .in-row{
+        margin-top: 2.5em !important;
+    }
+}
