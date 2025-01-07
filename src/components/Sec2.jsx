@@ -17,7 +17,7 @@ const Sec2 = () => {
                     </p>
                 </div>
             </div>
-            <div className='row'>
+            <div className='row row-gap-25'>
                 <div className='col-lg-4 col-12'>
                     <div className='ques-card' style={{'--bg': `#A7CF39`}}>
                         <Image src={ques} alt='ques' />

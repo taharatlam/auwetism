@@ -13,7 +13,9 @@
     font-family: 'Georgiab';
     src: url('/fonts/georgiab.ttf') format('truetype');
 }
-
+.row-gap-25{
+    row-gap: 25px;
+}
 $blue: #5D8FFE;
 $white: #fff;
 $black: #000;
@@ -508,5 +510,16 @@ h1,h2,h3,h4,h5,h6{
     .modal-header{
 
         color: $green;
+    }
+}
+.m-el{
+    display: none;
+}
+@media (max-width: 768px) {
+    .m-el{
+        display: block;
+    }
+    .d-el{
+        display: none;
     }
 }

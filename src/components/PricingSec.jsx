@@ -5,6 +5,8 @@ import Link from 'next/link'
 import arr from '@/images/arr.svg'
 import greenarr from '@/images/green-arr.svg'
 import PriceModal from './PriceModal'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/css'
 
 const PricingSec = () => {
     const [show, setShow] = useState(false);
@@ -73,7 +75,101 @@ const PricingSec = () => {
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-lg-4 col-12">
+                    <div className='col-12 m-el'>
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={10}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1.1,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20,
+                                },
+                            }}
+                        >
+                            <SwiperSlide>
+                                <div className="sub-card">
+                                    <div className="sub-top">
+                                        <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
+                                        {/* <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹9,000' : '$120') : (isIndia ? '₹1,08,000' : '$1,440')}</h4> */}
+                                        <h3>{isMonthly ? (isIndia ? '₹4,000' : '₹8,000') : (isIndia ? '₹40,000' : '₹80,000')}</h3>
+                                    </div>
+                                    <h4>
+                                        Evolving Plan
+                                    </h4>
+                                    <div>
+                                        <div className="points">
+                                            <ul>
+                                                <li>What is Autism</li>
+                                                <li>Oral motor challenges</li>
+                                                <li>Sensory diet</li>
+                                                <li>Using visual supports</li>
+                                                <li>Supporting sleep</li>
+                                                <li>Emotional wellness 2021</li>
+                                                <li>Emotional wellness 2022</li>
+                                                <li>Emotional wellness 2023</li>
+                                                <li>Emotional wellness 2024</li>
+                                            </ul>
+                                        </div>
+                                        <button onClick={() => handleShow('plan1')} className='main-btn know-more'>
+                                            <span>Know more</span>
+                                            <Image src={greenarr} alt='phone' />
+                                        </button>
+                                    </div>
+                                    <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn center'>
+                                        <span>Get Started</span>
+                                        <Image src={arr} alt='phone' />
+                                    </Link>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="sub-card">
+                                    <div className="sub-top">
+                                        <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
+                                        {/* <h4 className='strike-price'>{isMonthly ? (isIndia ? '₹10,000' : '$130') : (isIndia ? '₹1,21,000' : '$1,600')}</h4> */}
+                                        <h3>{isMonthly ? (isIndia ? '₹8,000' : '₹16,000') : (isIndia ? '₹80,000' : '₹1,60,000')}</h3>
+                                    </div>
+                                    <h4>
+                                        Empowered Plan
+                                    </h4>
+                                    <div>
+                                        <div className="points">
+                                            <ul>
+                                                <li>What is Autism</li>
+                                                <li>Oral motor challenges</li>
+                                                <li>Sensory diet</li>
+                                                <li>Using visual supports</li>
+                                                <li>Supporting sleep</li>
+                                                <li>Emotional wellness 2021</li>
+                                                <li>Emotional wellness 2022</li>
+                                                <li>Emotional wellness 2023</li>
+                                                <li>Emotional wellness 2024</li>
+                                            </ul>
+                                        </div>
+                                        <button onClick={() => handleShow('plan2')} className='main-btn know-more'>
+                                            <span>Know more</span>
+                                            <Image src={greenarr} alt='phone' />
+                                        </button>
+                                    </div>
+                                    <Link href='http://app.awetisminsights.com' target='_blank' className='main-btn center'>
+                                        <span>Get Started</span>
+                                        <Image src={arr} alt='phone' />
+                                    </Link>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                    <div className="col-lg-4 col-12 d-el">
                         <div className="sub-card">
                             <div className="sub-top">
                                 <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>
@@ -108,7 +204,7 @@ const PricingSec = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-4 col-12 d-el">
                         <div className="sub-card">
                             <div className="sub-top">
                                 <p>{isMonthly ? 'Monthly' : 'Yearly'}</p>

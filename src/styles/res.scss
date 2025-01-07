@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+    .main-header > img{
+        opacity: .3;
+    }
     .banner-content h1{
         font-size: 24px;
     }
@@ -9,6 +12,10 @@
         img{
             height: auto;
         }
+    }
+    .ques-card > img{
+        width: 40px;
+        height: auto;
     }
     .banner-content{
         padding-top: 2em;
